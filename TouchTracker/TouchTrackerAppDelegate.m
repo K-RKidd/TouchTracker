@@ -21,6 +21,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+    
+#ifdef VIEW_DEBUG
+    NSLog (@"%@", [[self window] preformSelector:@selector (resursiveDescription)]);
+#endif
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

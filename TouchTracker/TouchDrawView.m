@@ -242,4 +242,12 @@
         [gr setTranslation:CGPointZero inView:self];
     }
 }
+-(int)numberOfLines
+{
+    int count = 0;
+    //Check that they are non-nil before we add their counts
+    if (linesInProcess && completeLines)
+    count = [linesInProcess count] + [completeLines count];
+    return  count;
+}
 @end
